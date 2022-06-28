@@ -23,11 +23,19 @@ function my_keydown(e){
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla do alfabeto";
 			console.log("Tecla do alfabeto")
 		}
+		else{
+			otherkey();
+			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
+		}
 	//tecla dos números
 		if((keyPressed >=48 && keyPressed <=57)){
 			numberkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla dos números";
 			console.log("Tecla numérica")
+		}
+		else{
+			otherkey();
+			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
 		}
 	//tecla direcional
 		if((keyPressed >=37 && keyPressed <=40)){
@@ -35,16 +43,19 @@ function my_keydown(e){
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla direcional";
 			console.log("Tecla direcional")
 		}
+		else{
+			otherkey();
+			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
+		}
 	//tecla especial
 		if((keyPressed == 17 && 18)){
 			specialkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma especial";
 			console.log("Tecla especial")
 		}
-	//outra tecla
-		else {
+		else{
 			otherkey();
-			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
+			document.getElementById("d1").innerHTML="Você pressionou um símbolo ou outra tecla";
 		}
 }
 function aplhabetkey(){
