@@ -17,43 +17,32 @@ window.addEventListener("keydown", my_keydown)
 function my_keydown(e){
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
-	//teclas do alfabeto
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
+			//teclas do alfabeto
 			aplhabetkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla do alfabeto";
 			console.log("Tecla do alfabeto")
 		}
-		else{
-			otherkey();
-			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
-		}
-	//tecla dos números
-		if((keyPressed >=48 && keyPressed <=57)){
+		else if((keyPressed >=48 && keyPressed <=57)){
+			//tecla dos números
 			numberkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla dos números";
 			console.log("Tecla numérica")
 		}
-		else{
-			otherkey();
-			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
-		}
-	//tecla direcional
-		if((keyPressed >=37 && keyPressed <=40)){
+		else if((keyPressed >=37 && keyPressed <=40)){
+			//tecla direcional
 			arrowkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla direcional";
 			console.log("Tecla direcional")
 		}
-		else{
-			otherkey();
-			document.getElementById("d1").innerHTML="Você pressionou o símbolo ou outra tecla";
-		}
-	//tecla especial
-		if((keyPressed == 17 && 18)){
+		else if((keyPressed == 17 && 18)){
+			//tecla especial
 			specialkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma especial";
 			console.log("Tecla especial")
 		}
 		else{
+			//outra tecla
 			otherkey();
 			document.getElementById("d1").innerHTML="Você pressionou um símbolo ou outra tecla";
 		}
