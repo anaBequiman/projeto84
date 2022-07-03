@@ -1,16 +1,16 @@
-canvas = document.getElementById("meuCanvas");
+ccanvas = document.getElementById("meuCanvas");
 ctx = canvas.getContext("2d");
-larguraImg = 300;
-alturaImg = 100;
+larguraImg = 600;
+alturaImg = 300;
 var imagem;
 imgX = 100;
 imgY = 100;
 function add() {
 	img_imgTag = new Image();
-	img_imgTag.onload = uploadimg;
+	img_imgTag.onload = uploading;
 	img_imgTag.src = imagem;
 }
-function uploadimg() {
+function uploading() {
 	ctx.drawImage(img_imgTag, imgX, imgY, larguraImg, alturaImg);
 }
 window.addEventListener("keydown", my_keydown)
@@ -21,30 +21,33 @@ function my_keydown(e){
 			//teclas do alfabeto
 			aplhabetkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla do alfabeto";
-			console.log("Tecla do alfabeto")
+			console.log("Tecla do alfabeto");
 		}
 		else if((keyPressed >=48 && keyPressed <=57)){
 			//tecla dos números
 			numberkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla dos números";
-			console.log("Tecla numérica")
+			console.log("Tecla numérica");
 		}
 		else if((keyPressed >=37 && keyPressed <=40)){
 			//tecla direcional
 			arrowkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla direcional";
-			console.log("Tecla direcional")
+			console.log("Tecla direcional");
 		}
-		else if((keyPressed == 17 && 18)){
+		else if((keyPressed == 17, 18 && 27)){
 			//tecla especial
 			specialkey();
-			document.getElementById("d1").innerHTML = "Você pressionou uma especial";
-			console.log("Tecla especial")
+			document.getElementById("d1").innerHTML = "Você pressionou uma tecla especial";
+			console.log("Tecla especial");
 		}
+
+		
 		else{
 			//outra tecla
 			otherkey();
-			document.getElementById("d1").innerHTML="Você pressionou um símbolo ou outra tecla";
+			document.getElementById("d1").innerHTML = "Você pressionou um símbolo ou outra tecla";
+			console.log("Outra tecla");
 		}
 }
 function aplhabetkey(){
@@ -64,6 +67,6 @@ function specialkey(){
 	add();
 }
 function otherkey(){
-	imagem="OUTRA TECLA.png";
+	imagem = "OUTRA TECLA.png";
 	add();
 }
