@@ -1,4 +1,4 @@
-ccanvas = document.getElementById("meuCanvas");
+canvas = document.getElementById("meuCanvas");
 ctx = canvas.getContext("2d");
 larguraImg = 600;
 alturaImg = 300;
@@ -35,14 +35,12 @@ function my_keydown(e){
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla direcional";
 			console.log("Tecla direcional");
 		}
-		else if((keyPressed == 17, 18 && 27)){
+		else if((keyPressed == 17) || (keyPressed == 18) || (keyPressed == 27)){
 			//tecla especial
 			specialkey();
 			document.getElementById("d1").innerHTML = "Você pressionou uma tecla especial";
 			console.log("Tecla especial");
 		}
-
-		
 		else{
 			//outra tecla
 			otherkey();
